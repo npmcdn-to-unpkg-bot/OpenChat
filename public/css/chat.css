@@ -1,0 +1,32 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+#writingMessage {
+  color: darkgrey;
+}
+
+#bar{
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+    position: fixed;
+    background-color: grey;
+}
+
+#bar #at{
+    color: black;
+}
+
+#bar button{
+    width: 10vh;
+}
+
+#bar #user{
+  width: 100px;
+}
+
+#header{
+  color: darkgrey;
+}

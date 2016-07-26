@@ -1,0 +1,20 @@
+{
+  "name": "open_chat",
+  "version": "0.0.1",
+  "description": "...",
+  "main": "serve.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "openchat",
+    "opensource"
+  ],
+  "author": "Matheus Freire Rabelo",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
+    "socket.io": "^1.4.8"
+  }
+}

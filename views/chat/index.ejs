@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OpenChat</title>
+    <link href="http://localhost:8080/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost:8080/css/chat.css" media="screen" charset="utf-8">
+    <script src="http://localhost:8080/angular-1.5.7/angular.min.js"></script>
+  </head>
+  <body ng-controller="AppCtrl">
+
+      <div id="header">
+          You are talking to "{{path}}"
+      </div>
+
+      <div id="messages">
+        <div id="otherMessages" ng-repeat="msg in messages">
+            @{{msg[0] + ": " + msg[1]}}
+        </div>
+        <div id="writingMessage">
+          @{{user}}: {{message}}
+        </div>
+      </div>
+
+      <div id="bar">
+        <form ng-submit="send()" method="post">
+          <input type="text" ng-model="message" placeholder="Message" required="true" autocomplete="off" id="message"/>
+          <span id="at">@</span>
+          <input type="text" ng-model="user" placeholder="Username" required="true" autocomplete="off" id="user"/>
+          <button type="submit">Send</button>
+          <button type="button" ng-click="reset()">Reset</button>
+          <button type="button" ng-click="cancel()">Cancel</button>
+        </form>
+      </div>
+
+    <script src="http://localhost:8080/js/jquery-2.2.4.min.js" charset="utf-8"></script>
+    <script src="http://localhost:8080/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <script src="http://localhost:8080/js/socket.io-1.4.5.js" charset="utf-8"></script>
+    <script src="http://localhost:8080/js/chat.js" charset="utf-8"></script>
+  </body>
+</html>
